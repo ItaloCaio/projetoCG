@@ -1,4 +1,4 @@
-package algoritmo.operacoes3d;
+package algoritmo.figurasPlanas;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
-import projetoCG.PanelPrincipal;
+import projetoCG.TelaPrincipal;
 
 public class Retas extends JDialog {
 
@@ -96,29 +96,29 @@ public class Retas extends JDialog {
 			public void actionPerformed(ActionEvent e) {
 				if (tipo.equals("dda")) {
 					
-					PanelPrincipal.setLista(new RetasFuncoes().dda(
+					TelaPrincipal.setLista(new RetasFuncoes().dda(
 							Integer.valueOf(txtX.getText()),
 							Integer.valueOf(txtY.getText()),
 							Integer.valueOf(txtX2.getText()),
 							Integer.valueOf(txtY2.getText())));
 
 					PanelReta.panelPlanoCartesiano.limparImagem();
-					PanelPrincipal.povoarRetas(PanelPrincipal.getLista(), Color.BLUE);
+					TelaPrincipal.povoarRetas(TelaPrincipal.getLista(), Color.BLUE);
 				}
 
 				if (tipo.equals("pm")) {
-					PanelPrincipal.getLista().clear();
-					PanelPrincipal.setLista(new RetasFuncoes()
+					TelaPrincipal.getLista().clear();
+					TelaPrincipal.setLista(new RetasFuncoes()
 							.retaPontoMedio(Integer.valueOf(txtX.getText()),
 									Integer.valueOf(txtY.getText()),
 									Integer.valueOf(txtX2.getText()),
 									Integer.valueOf(txtY2.getText())));
 
 					PanelReta.panelPlanoCartesiano.limparImagem();
-					PanelPrincipal.povoarRetas(PanelPrincipal.getLista(), Color.BLUE);
+					TelaPrincipal.povoarRetas(TelaPrincipal.getLista(), Color.BLUE);
 
 				}
-				PanelPrincipal.panelNormalizacao.repaint();
+				TelaPrincipal.panelNormalizacao.repaint();
 				setVisible(false);
 			}
 		});

@@ -1,5 +1,5 @@
 
-package algoritmo.operacoes3d;
+package algoritmo.operacoesBasicas;
 
 import java.util.ArrayList;
 import java.util.List;

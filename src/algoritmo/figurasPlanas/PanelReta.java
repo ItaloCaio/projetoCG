@@ -1,4 +1,4 @@
-package algoritmo.operacoes3d;
+package algoritmo.figurasPlanas;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -7,12 +7,13 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
 
-import projetoCG.PanelPrincipal;
+import algoritmo.operacoesBasicas.FuncoesDeNormalizacao;
+import algoritmo.operacoesBasicas.PanelPlanoCartesiano;
+import algoritmo.operacoesBasicas.Ponto;
+import projetoCG.TelaPrincipal;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.util.ArrayList;
-import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -132,16 +133,16 @@ public class PanelReta extends JPanel {
 		
 		btnPontoMedio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PanelPrincipal.getLista().clear();
+				TelaPrincipal.getLista().clear();
 				getRetas().retaPontoMedio(Integer.valueOf(txt_x1.getText()),
 						Integer.valueOf(txt_y1.getText()),
 						Integer.valueOf(txt_x2.getText()),
 						Integer.valueOf(txt_y2.getText()));
-				PanelPrincipal.setLista(getRetas().getListaDePontos());
+				TelaPrincipal.setLista(getRetas().getListaDePontos());
 				
 				panelPlanoCartesiano.limparImagem();
 				try {
-					for (Ponto ponto : PanelPrincipal.getLista()) {
+					for (Ponto ponto : TelaPrincipal.getLista()) {
 						panelPlanoCartesiano.desenharPixel(ponto.getX() + 300,
 								-ponto.getY() + 300, Color.GREEN);
 					}
@@ -157,14 +158,14 @@ public class PanelReta extends JPanel {
 		btnDDA = new JButton("DDA");
 		btnDDA.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PanelPrincipal.setLista(getRetas().dda(Integer.valueOf(txt_x1.getText()),
+				TelaPrincipal.setLista(getRetas().dda(Integer.valueOf(txt_x1.getText()),
 						Integer.valueOf(txt_y1.getText()),
 						Integer.valueOf(txt_x2.getText()),
 						Integer.valueOf(txt_y2.getText())));
 				
 				panelPlanoCartesiano.limparImagem();
 				try {
-					for (Ponto ponto : PanelPrincipal.getLista()) {
+					for (Ponto ponto : TelaPrincipal.getLista()) {
 						panelPlanoCartesiano.desenharPixel(ponto.getX() + 300, -ponto.getY() + 300, Color.GREEN);						
 					}
 				} catch (Exception e) {

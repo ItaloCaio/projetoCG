@@ -1,4 +1,4 @@
-package algoritmo.operacoes3d;
+package algoritmo.operacoesBasicas;
 
 public class Matriz {
 

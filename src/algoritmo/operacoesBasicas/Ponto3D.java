@@ -1,4 +1,4 @@
-package algoritmo.operacoes3d;
+package algoritmo.operacoesBasicas;
 
 public class Ponto3D {
 	private int x = 0, y = 0, z = 0, w = 1;

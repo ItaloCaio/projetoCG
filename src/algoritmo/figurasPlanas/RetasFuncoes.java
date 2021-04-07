@@ -1,4 +1,6 @@
-package algoritmo.operacoes3d;
+package algoritmo.figurasPlanas;
+
+import algoritmo.operacoesBasicas.Ponto;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,11 @@
-package algoritmo.operacoes2D;
+package algoritmo.operacoesBasicas;
 
 import java.util.ArrayList; 
 import java.util.List;
 
-import algoritmo.operacoes3d.*;
-import projetoCG.PanelPrincipal;
-public class Operacoes {
+import algoritmo.operacoesBasicas.*;
+import projetoCG.TelaPrincipal;
+public class Operacoes2D {
 
 	/**
 	 * Matriz geradora de transla��o em uma matriz de 2D (duas dimen��es).
@@ -293,7 +293,7 @@ public class Operacoes {
 	public List<Ponto> rotacao(int angulo) {
 	
 		// Pegar a lista de pontos da TelaPrincipal
-		List<Ponto> lis = PanelPrincipal.getLista();
+		List<Ponto> lis = TelaPrincipal.getLista();
 		
 		double[][] matriz = new double[3][lis.size()];
 

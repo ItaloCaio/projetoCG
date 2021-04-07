@@ -1,9 +1,10 @@
-package algoritmo.operacoes3d;
+package algoritmo.figurasPlanas;
 
-import java.util.ArrayList; 
+import algoritmo.operacoesBasicas.Operacoes2D;
+import algoritmo.operacoesBasicas.Ponto;
+
+import java.util.ArrayList;
 import java.util.List;
-
-import algoritmo.operacoes2D.*;
 
 
 public class Circunferencia {
@@ -11,7 +12,7 @@ public class Circunferencia {
 	int d_old = 0;
 	int x, y, raio, x_dif, y_dif;
 	List<Ponto> listaPontos;
-	Operacoes operacoes = new Operacoes();
+	Operacoes2D operacoes = new Operacoes2D();
 	
 	public Circunferencia() {
 		// TODO Auto-generated constructor stub

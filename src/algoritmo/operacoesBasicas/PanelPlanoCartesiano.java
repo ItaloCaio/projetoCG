@@ -1,4 +1,4 @@
-package algoritmo.operacoes3d;
+package algoritmo.operacoesBasicas;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -10,8 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
-
-import algoritmo.operacoes3d.*;
 
 public class PanelPlanoCartesiano extends JPanel {
 

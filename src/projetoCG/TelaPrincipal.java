@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -18,16 +17,15 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 
 
-import algoritmo.circunferencia.*;
-import algoritmo.operacoes3d.*;
+import algoritmo.figurasPlanas.*;
+import algoritmo.operacoesBasicas.*;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
 
-public class PanelPrincipal extends JFrame {
+public class TelaPrincipal extends JFrame {
 
 
 	private JPanel contentPane;
@@ -76,7 +74,7 @@ public class PanelPrincipal extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PanelPrincipal frame = new PanelPrincipal();
+					TelaPrincipal frame = new TelaPrincipal();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -88,7 +86,7 @@ public class PanelPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PanelPrincipal() {
+	public TelaPrincipal() {
 		setExtendedState(Frame.MAXIMIZED_BOTH);
 
 		//**************PANEL PRINCIPAL**************************

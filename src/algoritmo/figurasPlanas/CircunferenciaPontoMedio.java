@@ -1,4 +1,4 @@
-package algoritmo.circunferencia;
+package algoritmo.figurasPlanas;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.border.TitledBorder;
 
 import projetoCG.*;
-import algoritmo.operacoes3d.*;
+import algoritmo.operacoesBasicas.*;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -46,14 +46,14 @@ public class CircunferenciaPontoMedio extends JFrame {
 				
 				int raio = Integer.valueOf(txt_raio.getText());
 				
-				PanelPrincipal.getLista().clear();
+				TelaPrincipal.getLista().clear();
 				
 				List<Ponto> listaPontos = new Circunferencia(0, 0, raio).circunferenciaPontoMedio();
 				
-				PanelPrincipal.setLista(listaPontos);
+				TelaPrincipal.setLista(listaPontos);
 				
-				PanelPrincipal.povoarRetas(listaPontos, Color.BLUE);
-				PanelPrincipal.panelNormalizacao.repaint();
+				TelaPrincipal.povoarRetas(listaPontos, Color.BLUE);
+				TelaPrincipal.panelNormalizacao.repaint();
 				
 				repaint();
 				validate();
